@@ -1,0 +1,131 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-size: 100%;
+}
+
+/* Categories Section */
+
+.categories {
+    max-width: 75rem;
+    margin: 2.5rem auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.category-item {
+    flex-grow: 1;
+    flex-basis: 0;
+    min-width: 33.33%;
+    border: 0.2rem solid white;
+    box-sizing: border-box;
+    height: 19rem;
+    background-size: cover;
+    background-position: center;
+    opacity: 0.75;
+    transition: 0.2s ease-in;
+}
+
+.category-item:hover {
+    opacity: 1;
+}
+
+.category-item-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.category-item-inner > div {
+    padding: 0.4rem 0.8rem;
+    background: black;
+    color: white;
+    border-radius: 0.4rem;
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Products Section */
+
+.featured-products {
+    margin-top: 1.25rem;
+    max-width: 75rem;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 0.4rem;
+}
+
+.featured-products-title {
+    font-size: 2rem;
+    text-align: center;
+    margin: 1rem;
+}
+
+.featured-product-item {
+    border-radius: 0.4rem;
+    overflow: hidden;
+    text-align: center;
+    box-sizing: border-box;
+    border: 0.2rem solid #ddd;
+}
+
+.featured-product-item-image {
+    height: 12.5rem;
+    background-size: cover;
+    background-position: center;
+}
+
+.featured-product-item > .title {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.featured-product-item > .description {
+    color: #666;
+}
+
+.featured-product-item > .price {
+    font-style: italic;
+}
+
+button {
+    outline: none;
+    background: black;
+    font-family: "Roboto", sans-serif;
+    color: white;
+    padding: 0.75rem 1rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 0.4rem;
+    font-size: 1rem;
+    margin: 0.75rem 0;
+}
+
+/* Media Queries */
+
+@media (max-width: 800px) {
+    .category-item {
+        min-width: 100%;
+    }
+    .featured-products {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 1000px) {
+    .category-item {
+        min-width: 50%;
+    }
+}
+
+@media (max-width: 1000px) {
+    .featured-products {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
